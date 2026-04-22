@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-earth-beige: #F5F2ED;
+  --color-earth-white: #FDFCFB;
+  --color-earth-stone: #1C1917;
+  --color-earth-graphite: #2D2A26;
+  --color-earth-accent: #8C7851;
+  --color-earth-accent-light: #D4B982;
+}
+
+/* Configure Tailwind 4 to use .dark class for dark mode */
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    height: 100%;
+  }
+  
+  body {
+    @apply bg-earth-white text-earth-graphite font-sans antialiased transition-colors duration-500 min-h-screen;
+    /* Force background for .dark class if utility classes fail to pick it up */
+  }
+  
+  .dark body {
+    @apply bg-earth-stone text-earth-beige;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .earth-border {
+    @apply border border-earth-graphite/10 transition-colors duration-500;
+  }
+
+  .dark .earth-border {
+    @apply border-earth-beige/10;
+  }
+}
