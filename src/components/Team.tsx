@@ -1,4 +1,8 @@
 import { motion } from 'motion/react';
+import biniyamPhoto from '../team/biniyam.png';
+import alexPhoto from '../team/biniyam.png';
+import temesgenPhoto from '../team/biniyam.png';
+import birukPhoto from '../team/biniyam.png';
 
 interface Member {
   name: string;
@@ -13,25 +17,25 @@ export default function Team() {
       name: 'Ato Alemayehu Gebre',
       position: 'General Manager & Lead Valuator',
       qualifications: 'BSc Civil Engineering, BSc Industrial Engineering. 15+ years experience at PPESA, Ministry of Trade and Industry.',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1000'
+      image: alexPhoto
     },
     {
       name: 'Ato Biniyam Yiheyis',
       position: 'Co-Founder & Senior Valuator',
       qualifications: 'BSc Management (Addis Ababa University). 12+ years experience in business and asset valuation.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=1000'
+      image: biniyamPhoto
     },
     {
       name: 'Ato Biruk G/Michael',
       position: 'Co-Founder & Electrical Engineer',
       qualifications: 'Registered Electro-Mechanical & Electrical Engineer. 11+ years of specialized technical experience.',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=1000'
+      image: birukPhoto
     },
     {
       name: 'Ato Temesgen Belete',
       position: 'Mechanical Expert',
       qualifications: 'BSc Mechanical Engineering. 15+ years experience in heavy equipment and project management.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1000'
+      image: temesgenPhoto
     }
   ];
 

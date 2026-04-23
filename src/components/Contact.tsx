@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter } from 'lucide-react';
+import logo from '../logo/logo.png';
 
 export default function Contact() {
   return (
@@ -84,12 +85,19 @@ export default function Contact() {
         </div>
 
         <footer className="mt-40 pt-16 border-t border-earth-graphite/5 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-12 text-balance">
-          <div className="flex flex-col gap-4 text-center md:text-left">
-             <div className="text-3xl font-serif tracking-[0.2em] font-light text-earth-graphite dark:text-earth-beige">ALMEKNUN</div>
-             <div className="text-[8px] font-bold uppercase tracking-[0.5em] text-earth-graphite/30 dark:text-earth-beige/20">
-               ALMEKNUN ASSET VALUATION AND CONSULTANCY PLC © 2026<br/>
-               ETB 150,000 Preliminary Scoping Fee Credits Applied.
-             </div>
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-8 text-center sm:text-left">
+            <img
+              src={logo}
+              alt=""
+              className="h-12 md:h-14 w-auto max-w-[180px] object-contain object-center sm:object-left"
+            />
+            <div className="flex flex-col gap-4">
+              <div className="text-3xl font-serif tracking-[0.2em] font-light text-earth-graphite dark:text-earth-beige">ALMEKNUN</div>
+              <div className="text-[8px] font-bold uppercase tracking-[0.5em] text-earth-graphite/30 dark:text-earth-beige/20">
+                ALMEKNUN ASSET VALUATION AND CONSULTANCY PLC © 2026<br/>
+                ETB 150,000 Preliminary Scoping Fee Credits Applied.
+              </div>
+            </div>
           </div>
           <div className="flex gap-10">
             <a href="#" className="text-[8px] uppercase tracking-[0.3em] text-earth-graphite/40 dark:text-earth-beige/30 hover:text-earth-accent dark:hover:text-earth-accent-light transition-colors font-bold italic">LinkedIn</a>

@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import logo from '../logo/logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,18 +60,23 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <motion.div 
+        <motion.a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setIsOpen(false);
+          }}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex flex-col"
+          className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-earth-accent/40 focus-visible:ring-offset-2 focus-visible:ring-offset-earth-white dark:focus-visible:ring-offset-earth-stone rounded-sm shrink-0"
         >
-          <span className="text-3xl font-serif tracking-[0.1em] font-light text-earth-graphite dark:text-earth-beige">
-            ALMEKNUN
-          </span>
-          <span className="text-[9px] tracking-[0.3em] font-sans font-semibold uppercase mt-0.5 text-earth-accent">
-            Asset Valuation
-          </span>
-        </motion.div>
+          <img
+            src={logo}
+            alt="Almeknun — home"
+            className="h-8 md:h-10 w-auto max-w-[200px] object-contain object-left"
+          />
+        </motion.a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-10">

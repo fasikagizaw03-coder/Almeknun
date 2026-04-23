@@ -1,16 +1,20 @@
 import { motion } from 'motion/react';
+import midrocLogo from '../clients/1.jpg';
+import arbaMinchLogo from '../clients/unnamed.png';
+import nocLogo from '../clients/National-Oil-Company.jpg';
+import yasbinLogo from '../clients/yasbin.webp';
 
 export default function Clients() {
   const clients = [
-    { name: "NOC Ethiopia", logo: "https://www.nocethiopia.com.et/images/logo.png" },
-    { name: "Midroc Ethiopia", logo: "https://midrocinvestmentgroup.com/static/media/logo.80b8d5a2.png" },
-    { name: "Arba Minch University", logo: "https://upload.wikimedia.org/wikipedia/en/5/52/Arba_Minch_University_logo.png" },
-    { name: "Yasbin General Trading", logo: null },
-    { name: "Fourabiyam Trading", logo: null },
-    { name: "Nigat Engineering", logo: null },
-    { name: "Dagim Kennedy", logo: null },
-    { name: "Albinhab Import Export", logo: null },
-    { name: "Biniyam Abebe Import", logo: null }
+    { name: 'NOC Ethiopia', logo: nocLogo },
+    { name: 'Midroc Ethiopia', logo: midrocLogo },
+    { name: 'Arba Minch University', logo: arbaMinchLogo },
+    { name: 'Yasbin General Trading', logo: yasbinLogo },
+    { name: 'Fourabiyam Trading', logo: null },
+    { name: 'Nigat Engineering', logo: null },
+    { name: 'Dagim Kennedy', logo: null },
+    { name: 'Albinhab Import Export', logo: null },
+    { name: 'Biniyam Abebe Import', logo: null }
   ];
 
   const doubledClients = [...clients, ...clients];
@@ -38,8 +42,7 @@ export default function Clients() {
                 <img 
                   src={client.logo} 
                   alt={client.name} 
-                  className="h-8 md:h-12 w-auto grayscale brightness-0 dark:brightness-0 dark:invert opacity-20 group-hover:opacity-100 group-hover:grayscale-0 group-hover:brightness-100 dark:group-hover:invert-0 transition-all duration-700 object-contain"
-                  referrerPolicy="no-referrer"
+                  className="h-8 md:h-12 w-auto max-w-[140px] object-contain opacity-20 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700"
                 />
               ) : (
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-earth-graphite/10 dark:border-white/10 flex items-center justify-center text-[10px] font-bold text-earth-graphite/20 dark:text-earth-beige/10 group-hover:border-earth-accent group-hover:text-earth-accent transition-all">
